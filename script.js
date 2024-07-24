@@ -54,7 +54,7 @@ function operate() {
             answer = opFirstNumber + opSecondNumber;
             break;
         case "-":
-            answer - opFirstNumber - opSecondNumber;
+            answer = opFirstNumber - opSecondNumber;
             break;
         case "/":
             answer = opFirstNumber / opSecondNumber;
