@@ -37,13 +37,13 @@ operatorButtons.forEach((button) => button.addEventListener("mouseout", () => { 
 //equals event listener, for now, just a test to print variables in the console
 equals.addEventListener("click", () => { console.log(firstNumber); });
 
+//Clear button event listener to reset operation
 clear.addEventListener("click", () => {
     firstNumber = [];
     secondNumber = [];
     let firstNumberdisplay = firstNumber.join("");
-    display.textContent = firstNumberdisplay;
     let secondNumberdisplay = firstNumber.join("");
-    display.textContent = secondNumberdisplay;
+    display.textContent = firstNumberdisplay;
 })
 
 //Event listeners to add specified number to firstNumber array when clicking the number button
