@@ -72,7 +72,7 @@ function operate() {
 // ||EVENT LISTENERS ||
 
 //Event Listeners to change color on mouseover for all number buttons
-buttons.forEach((button) => button.addEventListener("mouseover", () => { button.style["background-color"] = "blue" }));
+buttons.forEach((button) => button.addEventListener("mouseover", () => { button.style["background-color"] = "green" }));
 buttons.forEach((button) => button.addEventListener("mouseout", () => { button.style["background-color"] = "rgb(57, 87, 87" }));
 
 //Event Listeners to change color on mouseover for all operator buttons
