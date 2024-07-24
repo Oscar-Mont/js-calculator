@@ -1,55 +1,89 @@
 * {
-    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
     background-color: black;
+}
+
+h1 {
+    color: wheat;
+    text-align: center;
+    padding: 40px;
+}
+
+.web-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .calculator-frame {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-    padding: 50px 25px 50px 25px;
-    color: white;
-
-
-}
-
-.display-frame {
-    border: 2px solid red;
-    padding: 20px 10px 20px 10px;
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    margin: 20px;
+    background-color: darkslategrey;
 }
 
 .display {
+    flex: 1 1 auto;
+    border: 1px solid blue;
+    color: white;
+    background-color: rgb(116, 123, 112);
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.buttons-frame {
+    flex: 2 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+/* .numbers-frame {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 350px;
+    height: 350px;
+
+} */
+
+/* .operators-frame {
+    flex-direction: column;
+    border: 1px solid red;
+    width: 80px;
+    height: 80px;
+} */
+
+.horizontal-frame {
+    display: flex;
     flex-grow: 1;
-    border: 2px solid blue;
-    padding: 20px 10px 20px 10px;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
-.large-button-frame {
-    align-items: center;
-    flex-direction: row;
-    border: 2px solid red;
-    padding: 20px 10px 20px 10px;
-    margin: 20px;
-}
-
-.button-large {
-    align-self: center;
-    flex-grow: 1;
-    border: 2px solid red;
-    padding: 20px 25px 20px 25px;
-    margin: 10px;
-}
-
-.button-frame {
-    flex-direction: row;
-    align-items: center;
-    border: 2px solid red;
-    padding: 30px;
+.operator-button {
+    flex: 1 1 auto;
+    color: white;
+    border: 1px solid black;
+    background-color: rgb(35, 60, 60);
+    font-size: large;
+    margin: 2px;
 }
 
 .button {
-    flex-grow: 1;
-    border: 2px solid red;
-    padding: 30px 30px 30px 30px;
-    margin: 10px;
+    flex: 1 1 auto;
+    border: 1px solid black;
+    background-color: rgb(57, 87, 87);
+    color: white;
+    font-size: large;
+    margin: 2px;
 }
