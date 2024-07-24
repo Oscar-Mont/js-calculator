@@ -23,6 +23,7 @@ const clear = document.querySelector("#clear");
 const equals = document.querySelector("#equals");
 const buttons = document.querySelectorAll(".button");
 const operatorButtons = document.querySelectorAll(".operator-button");
+const display = document.querySelector(".display");
 
 
 //Event Listeners to change color on mouseover for all number buttons
@@ -54,10 +55,14 @@ num9.addEventListener("click", () => { getFirstNumber(9) });
 
 function getFirstNumber(number) {
     firstNumber.push(number);
+    let firstNumberdisplay = firstNumber.join("");
+    display.textContent = firstNumberdisplay;
 }
 
 function getSecondNumber(number) {
     secondNumber.push(number);
+    let secondNumberdisplay = firstNumber.join("");
+    display.textContent = secondNumberdisplay;
 }
 
 
