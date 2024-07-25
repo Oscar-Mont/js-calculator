@@ -74,6 +74,7 @@ function operate() {
             answer = 0;
             break;
     }
+    answer = answer.toLocaleString("en-US");
     numbersDisplay.textContent = answer;
 }
 
