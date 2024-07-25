@@ -3,6 +3,7 @@
 let firstNumber = [];
 let secondNumber = [];
 let operator = " ";
+let answer;
 
 // ||DOM Node Selection ||
 const num0 = document.querySelector("#cero");
@@ -48,7 +49,6 @@ function getOperator(str) {
 function operate() {
     let opFirstNumber = Number(firstNumber.join(""));
     let opSecondNumber = Number(secondNumber.join(""));
-    let answer;
     switch (operator) {
         case "+":
             answer = opFirstNumber + opSecondNumber;
@@ -106,77 +106,88 @@ equals.addEventListener("click", () => {
 
 //Event listeners to add specified number to firstNumber array when clicking the number button
 
-sum.addEventListener("click", () => { getOperator("+"); });
+sum.addEventListener("click", () => {
+    //if the second number is not there 
+    if (secondNumber.length == 0) {
+        getOperator("+");
+        //else if there is already a second number
+    } else if (secondNumber.length > 0) {
+        operate();
+        firstNumber = answer;
+        getOperator("+");
+    }
+    getOperator("+");
+});
 sub.addEventListener("click", () => { getOperator("-"); });
 mult.addEventListener("click", () => { getOperator("*"); });
 divi.addEventListener("click", () => { getOperator("/"); });
 
 //Event listeners for adding numbers
 num0.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(0)
     } else {
         getSecondNumber(0);
     }
 });
 num1.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(1)
     } else {
         getSecondNumber(1);
     }
 });
 num2.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(2)
     } else {
         getSecondNumber(2);
     }
 });
 num3.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(3)
     } else {
         getSecondNumber(3);
     }
 });
 num4.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(4)
     } else {
         getSecondNumber(4);
     }
 });
 num5.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(5)
     } else {
         getSecondNumber(5);
     }
 });
 num6.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(6)
     } else {
         getSecondNumber(6);
     }
 });
 num7.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(7)
     } else {
         getSecondNumber(7);
     }
 });
 num8.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(8)
     } else {
         getSecondNumber(8);
     }
 });
 num9.addEventListener("click", () => {
-    if (operator == " ") {
+    if (firstNumber.length == 0) {
         getFirstNumber(9)
     } else {
         getSecondNumber(9);
