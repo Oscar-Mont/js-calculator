@@ -72,12 +72,20 @@ function operate() {
 // ||EVENT LISTENERS ||
 
 //Event Listeners to change color on mouseover for all number buttons
-buttons.forEach((button) => button.addEventListener("mouseover", () => { button.style["background-color"] = "green" }));
-buttons.forEach((button) => button.addEventListener("mouseout", () => { button.style["background-color"] = "rgb(57, 87, 87" }));
+buttons.forEach((button) => button.addEventListener("mouseover", () => {
+    button.style["background-color"] = "green"
+}));
+buttons.forEach((button) => button.addEventListener("mouseout", () => {
+    button.style["background-color"] = "rgb(57, 87, 87"
+}));
 
 //Event Listeners to change color on mouseover for all operator buttons
-operatorButtons.forEach((button) => button.addEventListener("mouseover", () => { button.style["background-color"] = "blue" }));
-operatorButtons.forEach((button) => button.addEventListener("mouseout", () => { button.style["background-color"] = "rgb(35, 60, 60)" }))
+operatorButtons.forEach((button) => button.addEventListener("mouseover", () => {
+    button.style["background-color"] = "blue"
+}));
+operatorButtons.forEach((button) => button.addEventListener("mouseout", () => {
+    button.style["background-color"] = "rgb(35, 60, 60)"
+}))
 
 //Clear button event listener to reset calcualtor
 clear.addEventListener("click", () => {
@@ -89,7 +97,7 @@ clear.addEventListener("click", () => {
     display.textContent = firstNumberdisplay;
 })
 
-//Equals button event listener
+//Equals button event listener to operate
 equals.addEventListener("click", () => {
     console.log(firstNumber);
     console.log(secondNumber);
