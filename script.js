@@ -103,6 +103,7 @@ clear.addEventListener("click", () => {
 //Equals button event listener to operate
 equals.addEventListener("click", () => {
     operate();
+    operatorsDisplay.textContent = " ";
     console.log(firstNumber);
     console.log(operator);
     console.log(secondNumber);
