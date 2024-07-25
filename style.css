@@ -34,7 +34,6 @@ h1 {
     display: flex;
     justify-content: space-around;
     flex: 1 1 auto;
-    border: 1px solid blue;
     color: white;
     background-color: rgb(116, 123, 112);
     text-align: center;
@@ -45,12 +44,12 @@ h1 {
 
 .numbers-display {
     flex: 3 1 auto;
-    border: 1px solid red;
+    background-color: rgb(116, 123, 112);
 }
 
 .operators-display {
     flex: 1 1 auto;
-    border: 1px solid red;
+    background-color: rgb(116, 123, 112);
 }
 
 .buttons-frame {
