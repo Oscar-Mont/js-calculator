@@ -3,7 +3,7 @@
 let firstNumber = [];
 let secondNumber = [];
 let operator = " ";
-let answer;
+let answer = 0;
 
 // ||DOM Node Selection ||
 const num0 = document.querySelector("#cero");
@@ -112,15 +112,54 @@ sum.addEventListener("click", () => {
         getOperator("+");
         //else if there is already a second number
     } else if (secondNumber.length > 0) {
+        //perform the operation
         operate();
-        firstNumber = answer;
+        //change first number array to an array of the data in answer variable
+        firstNumber = answer.toString().split("");
+        //reset second number array so it receives info frumt he numbers
+        secondNumber = [];
+        //reset the operator variable with getOperator() function
         getOperator("+");
+        //now clicking "=" button or any operator will perform th eoperation of
+        //answer + secondNumber
     }
-    getOperator("+");
 });
-sub.addEventListener("click", () => { getOperator("-"); });
-mult.addEventListener("click", () => { getOperator("*"); });
-divi.addEventListener("click", () => { getOperator("/"); });
+
+sub.addEventListener("click", () => {
+
+    if (secondNumber.length == 0) {
+        getOperator("-");
+    } else if (secondNumber.length > 0) {
+        operate();
+        firstNumber = answer.toString().split("");
+        secondNumber = [];
+        getOperator("-");
+    }
+});
+
+mult.addEventListener("click", () => {
+
+    if (secondNumber.length == 0) {
+        getOperator("*");
+    } else if (secondNumber.length > 0) {
+        operate();
+        firstNumber = answer.toString().split("");
+        secondNumber = [];
+        getOperator("*");
+    }
+});
+
+divi.addEventListener("click", () => {
+
+    if (secondNumber.length == 0) {
+        getOperator("/");
+    } else if (secondNumber.length > 0) {
+        operate();
+        firstNumber = answer.toString().split("");
+        secondNumber = [];
+        getOperator("/");
+    }
+});
 
 //Event listeners for adding numbers
 num0.addEventListener("click", () => {
