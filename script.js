@@ -17,6 +17,7 @@ const num6 = document.querySelector("#six");
 const num7 = document.querySelector("#seven");
 const num8 = document.querySelector("#eight");
 const num9 = document.querySelector("#nine");
+const dot = document.querySelector("#dot");
 const sum = document.querySelector("#sum");
 const sub = document.querySelector("#sub");
 const mult = document.querySelector("#mult");
@@ -177,71 +178,78 @@ divi.addEventListener("click", () => {
 
 num0.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(0)
+        getFirstNumber(0);
     } else {
         getSecondNumber(0);
     }
 });
 num1.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(1)
+        getFirstNumber(1);
     } else {
         getSecondNumber(1);
     }
 });
 num2.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(2)
+        getFirstNumber(2);
     } else {
         getSecondNumber(2);
     }
 });
 num3.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(3)
+        getFirstNumber(3);
     } else {
         getSecondNumber(3);
     }
 });
 num4.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(4)
+        getFirstNumber(4);
     } else {
         getSecondNumber(4);
     }
 });
 num5.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(5)
+        getFirstNumber(5);
     } else {
         getSecondNumber(5);
     }
 });
 num6.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(6)
+        getFirstNumber(6);
     } else {
         getSecondNumber(6);
     }
 });
 num7.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(7)
+        getFirstNumber(7);
     } else {
         getSecondNumber(7);
     }
 });
 num8.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(8)
+        getFirstNumber(8);
     } else {
         getSecondNumber(8);
     }
 });
 num9.addEventListener("click", () => {
     if (indicator == false) {
-        getFirstNumber(9)
+        getFirstNumber(9);
     } else {
         getSecondNumber(9);
+    }
+});
+dot.addEventListener("click", () => {
+    if (indicator == false) {
+        getFirstNumber(".");
+    } else {
+        getSecondNumber(".");
     }
 });
