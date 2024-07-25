@@ -60,7 +60,11 @@ function operate() {
             answer = opFirstNumber - opSecondNumber;
             break;
         case "/":
-            answer = opFirstNumber / opSecondNumber;
+            if (opSecondNumber == 0) {
+                answer = "Can't divide by 0";
+            } else {
+                answer = opFirstNumber / opSecondNumber;
+            }
             break;
         case "*":
             answer = opFirstNumber * opSecondNumber;
@@ -95,6 +99,7 @@ clear.addEventListener("click", () => {
     firstNumber = [];
     secondNumber = [];
     operator = " ";
+    answer = 0;
     indicator = false;
     numbersDisplay.textContent = " ";
     operatorsDisplay.textContent = " ";
