@@ -34,15 +34,31 @@ const numbersDisplay = document.querySelector(".numbers-display");
 
 
 function getFirstNumber(number) {
-    firstNumber.push(number);
-    let firstNumberDisplay = firstNumber.join("");
-    numbersDisplay.textContent = firstNumberDisplay;
+    if (number == ".") {
+        firstNumber.push(number);
+        let firstNumberDisplay = firstNumber.join("");
+        numbersDisplay.textContent = firstNumberDisplay;
+        dot.disabled = true;
+        dot.addEventListener("mouseover", () => dot.style["background-color"] = "red");
+    } else {
+        firstNumber.push(number);
+        let firstNumberDisplay = firstNumber.join("");
+        numbersDisplay.textContent = firstNumberDisplay;
+    }
 }
 
 function getSecondNumber(number) {
-    secondNumber.push(number);
-    let secondNumberdisplay = secondNumber.join("");
-    numbersDisplay.textContent = secondNumberdisplay;
+    if (number == ".") {
+        secondNumber.push(number);
+        let secondNumberDisplay = secondNumber.join("");
+        numbersDisplay.textContent = secondNumberDisplay;
+        dot.disabled = true;
+        dot.addEventListener("mouseover", () => dot.style["background-color"] = "red");
+    } else {
+        secondNumber.push(number);
+        let secondNumberDisplay = secondNumber.join("");
+        numbersDisplay.textContent = secondNumberDisplay;
+    }
 }
 
 function getOperator(str) {
@@ -105,6 +121,8 @@ clear.addEventListener("click", () => {
     indicator = false;
     numbersDisplay.textContent = " ";
     operatorsDisplay.textContent = " ";
+    dot.disabled = false;
+    dot.addEventListener("mouseover", () => dot.style["background-color"] = "green");
 })
 
 //Equals button event listener to operate
@@ -120,6 +138,8 @@ equals.addEventListener("click", () => {
 //Event listeners to add specified number to firstNumber array when clicking the number button
 
 sum.addEventListener("click", () => {
+    dot.addEventListener("mouseover", () => dot.style["background-color"] = "green");
+    dot.disabled = false;
     indicator = true;
     //if the second number is not there 
     if (secondNumber.length == 0) {
@@ -140,6 +160,8 @@ sum.addEventListener("click", () => {
 });
 
 sub.addEventListener("click", () => {
+    dot.addEventListener("mouseover", () => dot.style["background-color"] = "green");
+    dot.disabled = false;
     indicator = true;
     if (secondNumber.length == 0) {
         getOperator("-");
@@ -152,6 +174,8 @@ sub.addEventListener("click", () => {
 });
 
 mult.addEventListener("click", () => {
+    dot.addEventListener("mouseover", () => dot.style["background-color"] = "green");
+    dot.disabled = false;
     indicator = true;
     if (secondNumber.length == 0) {
         getOperator("*");
@@ -164,6 +188,8 @@ mult.addEventListener("click", () => {
 });
 
 divi.addEventListener("click", () => {
+    dot.addEventListener("mouseover", () => dot.style["background-color"] = "green");
+    dot.disabled = false;
     indicator = true;
     if (secondNumber.length == 0) {
         getOperator("/");
